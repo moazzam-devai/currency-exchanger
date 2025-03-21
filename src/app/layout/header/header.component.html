@@ -1,0 +1,16 @@
+<header class="header">
+    <div class="logo-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="#3498db">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+        </svg>
+    </div>
+    
+    <div class="links-container">
+        <div>
+            <ul class="user-profile-dropdown-list">
+                <li class="user-profile-dropdown-list-item"  (click)="redirect(false)" > <a [routerLinkActive]="['active']" [routerLink]="['/details', defaultCurrencyConverionPair.EURUSD]" class="current-view"> EUR-USD Details </a> </li>
+                <li class="user-profile-dropdown-list-item"> <a  [routerLinkActive]="['active']"  [routerLink]="['/details', defaultCurrencyConverionPair.EURGBP]"  class="current-view"> EUR-GBP Details </a> </li>
+            </ul>
+        </div>
+    </div>
+</header>

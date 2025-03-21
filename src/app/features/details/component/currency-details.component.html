@@ -1,0 +1,15 @@
+
+    <div class="logo-container">
+      <p> {{sharedData.fromCurencyName}} </p>
+    </div>
+    
+    <div class="links-container">
+        <div>
+            <ul class="user-profile-dropdown-list">
+                <li class="user-profile-dropdown-list-item"> <a [routerLink]="['/']" class="current-view">Back home </a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <app-currency-converter></app-currency-converter>
+    <app-historical-rates></app-historical-rates>

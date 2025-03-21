@@ -1,0 +1,14 @@
+<div align='center'>
+  <ng-container *ngIf="baseCurrencyData.length > 0">
+  <ejs-chart style='display:block;' [chartArea]='chartArea' [width]='width' align='center'
+      [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis'  [tooltip]='tooltip' (load)='load($event)'>
+      <e-series-collection>
+          <e-series [dataSource]='baseCurrencyData' type='StackingLine' xName='x' yName='y' 
+            width='2' [marker]='marker'
+              dashArray='5,1'> </e-series>
+          <!-- <e-series [dataSource]='data1' type='StackingLine' xName='x' yName='y' width='2'
+              [marker]='marker' dashArray='5,1'> </e-series> -->
+      </e-series-collection>
+  </ejs-chart>
+</ng-container>
+</div>

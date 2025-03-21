@@ -1,0 +1,12 @@
+<app-currency-converter (popularCurriencs)="assignCurrenciesList($event)"></app-currency-converter>
+
+
+<ng-container *ngIf="popularcurriencsList.length > 0; else noDataTemplate">
+  <app-popular-currencies [popularcurriencs]="popularcurriencsList"></app-popular-currencies>
+</ng-container>
+
+<ng-template #noDataTemplate>
+  <div class="">No data available.</div>
+</ng-template>
+
+

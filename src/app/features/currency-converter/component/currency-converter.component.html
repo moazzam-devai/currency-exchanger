@@ -1,0 +1,29 @@
+<form [formGroup]="currencyForm" class="currency-form">
+    <ng-container class="select-container">
+      <app-select 
+        [options]="symbols"
+        (optionSelected)="onCurrencySelected(currencySymbolsType.Base,$event)"
+        [selectedOption]="currencyForm.get(currencySymbolsType.Base)?.value"
+        class="select-left"
+      ></app-select>
+      <button class="swap-button" (click)="onSwapClick()">Swap</button>
+      <app-select
+        [options]="symbols"
+        (optionSelected)="onCurrencySelected($event,  currencySymbolsType.Symbols)"
+        [selectedOption]="currencyForm.get(currencySymbolsType.Symbols)?.value"
+        class="select-right"
+      ></app-select>
+    </ng-container>
+  
+    <label for="numericField">Amount:</label>
+    <input id="numericField" type="text" formControlName="amount" (input)="onInputChange($event)" class="input-field"/>
+    <button (click)="onConversion()" type="button" [disabled]="!currencyForm.valid" class="convert-button">Convert</button>
+  </form>
+  <button  type="button" class="convert-button"><a [routerLink]="['/details','']">more details</a></button>
+  <p class="converted-amount"> {{ defaultBaseCurrencyAmount}} {{currencyForm.get(currencySymbolsType.Base)?.value}} = {{baseCurrencyRate}} {{currencyForm.get(currencySymbolsType.Symbols)?.value}}</p>
+  <div class="container">
+    <div class="box">
+      <p class="converted-amount">{{ convertedAmount }} <span>{{ unit }}</span></p>
+    </div>
+  </div>
+

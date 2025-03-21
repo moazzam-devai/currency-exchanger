@@ -1,0 +1,9 @@
+
+   <div>
+    <label for="fromSymbol">Select a currency symbol:</label>
+    <select id="fromSymbol" [(ngModel)]="selectedOption" name="selectedOption"  (change)="onOptionSelected($event)">
+      <option *ngFor="let symbol of options | keyvalue" [value]="symbol.key">{{ symbol.key }}</option>
+    </select>
+    <p>Selected Currency Symbol: {{ selectedOption }}</p>
+  </div>
+  

@@ -1,0 +1,41 @@
+// Container styles
+div {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  
+    // Label styles
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  
+    // Select styles
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+  
+      // Option styles
+      option {
+        padding: 10px;
+      }
+  
+      // Hover styles
+      &:hover {
+        border-color: #007bff;
+      }
+    }
+  
+    // Selected Currency Symbol styles
+    p {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  }
+  

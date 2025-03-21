@@ -1,0 +1,17 @@
+<!-- grid-boxes.component.html -->
+<div class="container">
+  <div *ngFor="let currency of popularcurriencs">
+    <div
+      class="box"
+      *ngFor="let conversion of getConversions(currency.popularConversions)"
+    >
+      <!-- Display popularConversions -->
+      <div>
+        <p>
+          {{ currency.amount }} {{ currency.base }} =
+          {{ conversion.conversionRate }} {{ conversion.currencyCode }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
